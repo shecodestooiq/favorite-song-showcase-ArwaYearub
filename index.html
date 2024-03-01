@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Favorite Song Showcase</title>
-  </head>
 
-  <body>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favorite Song Showcase</title>
+</head>
+
+<body>
+  <h1>
+    Display Your Favorite Song Online!
+  </h1>
+  <div id="get-info">
+    <form onsubmit="displaySongInfo()" id="input-form">
+      <div id="name-div">
+        <label for="name">Name of Your Favorite Song</label>
+        <input type="text" name="name" id="name" placeholder="ex.duvet" required>
+      </div>
+      <div id="yt-div">
+        <label for="yt-link">Youtube Link</label>
+        <input type="text" name="yt-link" id="yt-link" placeholder=" ctrl + p link here" required>
+      </div>
+      <div id="description-div">
+        <label for="description">Describe the Song</label>
+        <input type="textarea" name="description" id="description" placeholder="describe the song" required>
+      </div>
+      <div id="year-div">
+        <label for="year">Year of Discovery</label>
+        <input type="number" name="year" id="year" min="1900" max="2024" maxlength="4" minlength="4" required>
+      </div>
+      <div id="button-div">
+        <button type="submit" onclick="dispatc">Click to Display the Song</button>
+        <!--the button will activate the js function to work! -->
+      </div>
+    </form>
+  </div>
+
+  <div id="display-area" style="display: none;">
+    <div id="display-name"></div>
+    <div id="display-description"></div>
+    <div id="display-year"></div>
+    <div id="display-yt"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
